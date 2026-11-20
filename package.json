@@ -1,0 +1,24 @@
+{
+  "name": "turbo-rush",
+  "version": "1.0.0",
+  "description": "Turbo Rush - juego de carreras original (HTML5 + Capacitor para Android)",
+  "private": true,
+  "scripts": {
+    "jugar": "npx --yes http-server . -p 8080 -c-1",
+    "web": "node build-web.js",
+    "android:agregar": "node build-web.js && cap add android && node patch-android.js",
+    "android:sync": "node build-web.js && node patch-android.js && cap sync android",
+    "android:abrir": "cap open android",
+    "apk": "cd android && ./gradlew assembleDebug",
+    "un-solo-archivo": "node build-single-file.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  },
+  "engines": { "node": ">=22" }
+}

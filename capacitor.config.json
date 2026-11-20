@@ -1,0 +1,9 @@
+{
+  "appId": "com.turborush.game",
+  "appName": "Turbo Rush",
+  "webDir": "www",
+  "backgroundColor": "#05060a",
+  "android": {
+    "backgroundColor": "#05060a"
+  }
+}
